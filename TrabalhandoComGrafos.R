@@ -41,4 +41,21 @@ graus_entradas
 graus_saida <- data.frame(grau_saida <-  degree(semanareply, mode = "out") ) 
 graus_saida
 
+## Cálculo da Centralidade (Betwennes). 
+## Quanto o grafo está centralizado. 
+## Qual o caminho mais curto para se chegar e sua reincidência.
+## Quanto mais passa por ele, mais é central.
+## Criadores de bolhas??
+graus_centralidade <- data.frame(grau_centralidade <-  betweenness(semanareply))
+graus_centralidade
+
+
+## Cálculo pagerank - relevância do vértice.
+grau_pagerank1 <-page_rank(semanareply)$vector
+lista_pagerank <- data.frame(grau_pagerank1)
+lista_pagerank
+
+## Cálculo do Grau_total.
+graus_total<- data.frame(grau_total <-  degree(semanareply, mode = "total") ) 
+graus_total
 
